@@ -4,6 +4,6 @@ from time import sleep
 servo = angle_servo(14)
 
 while True:
-    angle = input("Angle?")
+    angle = float(input("Angle?"))
     servo.angle = angle
     sleep(1)
