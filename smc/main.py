@@ -1,10 +1,9 @@
-from gpiozero import LED
+from gpiozero import AngularServo as angle_servo
 from time import sleep
 
-yellow = LED(2)
+servo = angle_servo(14)
 
 while True:
-    yellow.on()
-    sleep(.5)
-    yellow.off()
-    sleep(.5)
+    angle = input("Angle?")
+    servo.angle = angle
+    sleep(1)
